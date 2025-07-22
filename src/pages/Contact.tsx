@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -13,23 +13,24 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
-      content: "123 Serenity Lane, Nagpur, India"
+      content:
+        "Plot Number 169, Opp Police Training School, RPTS Rd, Laxminagar, Malhotras, Maharashtra 440010",
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      content: "+91 (712) 555-0123"
+      content: "+91-9370253809",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "info@sunwaywellness.com"
+      content: "info@sunwaywellness.com",
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Hours",
-      content: "10:00 AM - 9:00 PM Daily"
-    }
+      content: "10:00 AM - 9:00 PM Daily",
+    },
   ];
 
   return (
@@ -39,9 +40,10 @@ const Contact = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -55,7 +57,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section ref={ref} className="py-20 px-4 bg-neutral-50 dark:bg-neutral-900">
+      <section
+        ref={ref}
+        className="py-20 px-4 bg-neutral-50 dark:bg-neutral-900"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Form */}
