@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Calendar, User, ArrowRight } from "lucide-react";
 
 const Blog = () => {
   const [ref, inView] = useInView({
@@ -12,36 +12,44 @@ const Blog = () => {
   const blogPosts = [
     {
       title: "The Benefits of Regular Massage Therapy",
-      excerpt: "Discover how regular massage sessions can improve your physical and mental well-being...",
-      image: "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg",
+      excerpt:
+        "Discover how regular massage sessions can improve your physical and mental well-being...",
+      image:
+        "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg",
       date: "March 15, 2024",
       author: "Dr. Sarah Johnson",
-      category: "Wellness"
+      category: "Wellness",
     },
     {
       title: "Understanding Different Types of Massage",
-      excerpt: "A comprehensive guide to various massage techniques and their unique benefits...",
-      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg",
+      excerpt:
+        "A comprehensive guide to various massage techniques and their unique benefits...",
+      image:
+        "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg",
       date: "March 12, 2024",
       author: "Maria Chen",
-      category: "Education"
+      category: "Education",
     },
     {
       title: "Essential Oils in Aromatherapy",
-      excerpt: "Learn about the healing properties of different essential oils used in aromatherapy...",
-      image: "https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg",
+      excerpt:
+        "Learn about the healing properties of different essential oils used in aromatherapy...",
+      image:
+        "https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg",
       date: "March 10, 2024",
       author: "Emma Williams",
-      category: "Aromatherapy"
+      category: "Aromatherapy",
     },
     {
       title: "The Art of Thai Massage",
-      excerpt: "Explore the ancient healing practice of Thai massage and its modern applications...",
-      image: "https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg",
+      excerpt:
+        "Explore the ancient healing practice of Thai massage and its modern applications...",
+      image:
+        "https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg",
       date: "March 8, 2024",
       author: "John Smith",
-      category: "Traditional Practices"
-    }
+      category: "Traditional Practices",
+    },
   ];
 
   return (
@@ -51,15 +59,18 @@ const Blog = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage:
+              "url(https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-serif mb-4">Wellness Blog</h1>
+          <h1 className="text-5xl md:text-6xl font-serif mb-4">
+            Wellness Blog
+          </h1>
           <p className="text-xl font-light max-w-2xl mx-auto">
             Insights and articles about wellness, massage, and holistic healing
           </p>
@@ -97,7 +108,9 @@ const Blog = () => {
                       {post.author}
                     </span>
                   </div>
-                  <h2 className="text-xl font-serif text-gold mb-3">{post.title}</h2>
+                  <h2 className="text-xl font-serif text-gold mb-3">
+                    {post.title}
+                  </h2>
                   <p className="text-gold-light mb-4">{post.excerpt}</p>
                   <button className="inline-flex items-center text-gold hover:text-gold-light transition-colors">
                     Read More
