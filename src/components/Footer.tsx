@@ -1,6 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,15 +20,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-gold" />
-                <p>123 Serenity Lane, Nagpur, India</p>
+                <p>
+                  Plot Number 169, Opp Police Training School, RPTS Rd,
+                  Laxminagar, Malhotras, Maharashtra 440022
+                </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-gold" />
-                <p>+91 (712) 555-0123</p>
+                <p>+91 9370253809</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-gold" />
-                <p>info@sunwaywellness.com</p>
+                <p>sunwaywellness@gmail.com</p>
               </div>
             </div>
           </div>
@@ -36,17 +46,26 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-gold transition-colors">
+                <Link
+                  to="/services"
+                  className="hover:text-gold transition-colors"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/testimonials" className="hover:text-gold transition-colors">
+                <Link
+                  to="/testimonials"
+                  className="hover:text-gold transition-colors"
+                >
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-gold transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-gold transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -60,7 +79,9 @@ const Footer = () => {
 
           {/* Social Media & Newsletter */}
           <div>
-            <h3 className="font-serif text-xl mb-4 text-gold">Connect With Us</h3>
+            <h3 className="font-serif text-xl mb-4 text-gold">
+              Connect With Us
+            </h3>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="hover:text-gold transition-colors">
                 <Instagram className="h-6 w-6" />
@@ -73,7 +94,9 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <h4 className="text-sm font-semibold mb-2 text-gold">Opening Hours</h4>
+              <h4 className="text-sm font-semibold mb-2 text-gold">
+                Opening Hours
+              </h4>
               <p className="text-gold-light">
                 Monday - Sunday: 10:00 AM - 9:00 PM
               </p>
@@ -82,7 +105,10 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gold/20 text-center">
-          <p className="text-gold-light">&copy; {new Date().getFullYear()} Sunway Wellness. All rights reserved.</p>
+          <p className="text-gold-light">
+            &copy; {new Date().getFullYear()} Sunway Wellness. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

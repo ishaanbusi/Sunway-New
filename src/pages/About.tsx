@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Award, Users, Clock, Leaf } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Award, Users, Clock, Leaf } from "lucide-react";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -13,23 +13,25 @@ const About = () => {
     {
       icon: <Award className="h-8 w-8 text-emerald-600" />,
       title: "Excellence Since 2009",
-      description: "Pioneering luxury wellness in Nagpur for over a decade."
+      description: "Pioneering luxury wellness in Nagpur for over a decade.",
     },
     {
       icon: <Users className="h-8 w-8 text-emerald-600" />,
       title: "Expert Therapists",
-      description: "Internationally certified professionals with years of experience."
+      description:
+        "Internationally certified professionals with years of experience.",
     },
     {
       icon: <Clock className="h-8 w-8 text-emerald-600" />,
       title: "Personalized Care",
-      description: "Tailored treatments to meet your unique wellness needs."
+      description: "Tailored treatments to meet your unique wellness needs.",
     },
     {
       icon: <Leaf className="h-8 w-8 text-emerald-600" />,
       title: "Natural Products",
-      description: "Premium organic and natural spa products for optimal results."
-    }
+      description:
+        "Premium organic and natural spa products for optimal results.",
+    },
   ];
 
   return (
@@ -39,9 +41,10 @@ const About = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -49,7 +52,8 @@ const About = () => {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-serif mb-4">Our Story</h1>
           <p className="text-xl font-light max-w-2xl mx-auto">
-            Discover the journey that made us Nagpur's premier luxury wellness destination
+            Discover the journey that made us Nagpur's premier luxury wellness
+            destination
           </p>
         </div>
       </section>
@@ -68,16 +72,27 @@ const About = () => {
                 A Decade of Wellness Excellence
               </h2>
               <p className="text-neutral-600 dark:text-neutral-300 mb-6">
-                Founded in 2009, Sunway Wellness emerged from a vision to create an 
-                urban sanctuary where ancient healing traditions meet modern luxury. 
-                Our journey began with a simple yet profound mission: to provide a 
-                haven of tranquility in the heart of Nagpur.
+                Established in 2009, Sunway Wellness proudly stands as Nagpur’s
+                first professional spa — a true pioneer in the city’s wellness
+                and relaxation industry. Since our inception, we have remained
+                deeply committed to delivering world-class therapies,
+                personalized care, and a holistic healing experience to every
+                guest.
               </p>
+
+              <p className="text-neutral-600 dark:text-neutral-300 mb-6">
+                Over the years, Sunway has grown to become Nagpur’s most trusted
+                name in wellness, loved and supported by thousands of loyal
+                clients who value authenticity, hygiene, and service excellence
+                above all else.
+              </p>
+
               <p className="text-neutral-600 dark:text-neutral-300">
-                Today, we stand as the city's most prestigious wellness destination, 
-                offering an unparalleled range of therapeutic treatments and luxury 
-                spa experiences. Our success is built on our commitment to excellence, 
-                authenticity, and the continuous pursuit of innovation in wellness.
+                With this unwavering trust, we have now expanded our presence to
+                Jalgaon — bringing the same premium experience and healing touch
+                to a new community. At Sunway Wellness, we don’t just offer
+                therapies; we create a sanctuary where wellness meets warmth,
+                and every guest feels genuinely cared for.
               </p>
             </div>
             <div className="relative">
@@ -115,9 +130,11 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 bg-white dark:bg-neutral-900">
+      {/* <section className="py-20 px-4 bg-white dark:bg-neutral-900">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif mb-12">Our Expert Team</h2>
+          <h2 className="text-3xl md:text-4xl font-serif mb-12">
+            Our Expert Team
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((_, index) => (
               <motion.div
@@ -128,35 +145,35 @@ const About = () => {
                 className="bg-neutral-50 dark:bg-neutral-800 rounded-lg overflow-hidden shadow-lg"
               >
                 <img
-                  src={`https://images.unsplash.com/photo-${[
-                    '1559599076-f576eb31c426',
-                    '1494790108377-be9c29b29330',
-                    '1438761681033-6461ffad8d80'
-                  ][index]}?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80`}
+                  src={`https://images.unsplash.com/photo-${
+                    [
+                      "1559599076-f576eb31c426",
+                      "1494790108377-be9c29b29330",
+                      "1438761681033-6461ffad8d80",
+                    ][index]
+                  }?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80`}
                   alt={`Team member ${index + 1}`}
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-serif mb-2">
-                    {[
-                      'Sarah Johnson',
-                      'Maria Chen',
-                      'Emma Williams'
-                    ][index]}
+                    {["Sarah Johnson", "Maria Chen", "Emma Williams"][index]}
                   </h3>
                   <p className="text-neutral-600 dark:text-neutral-400">
-                    {[
-                      'Senior Therapist',
-                      'Wellness Director',
-                      'Ayurvedic Specialist'
-                    ][index]}
+                    {
+                      [
+                        "Senior Therapist",
+                        "Wellness Director",
+                        "Ayurvedic Specialist",
+                      ][index]
+                    }
                   </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

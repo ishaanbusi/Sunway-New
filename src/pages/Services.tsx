@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Clock, Star } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Services = () => {
   const [ref, inView] = useInView({
@@ -12,46 +11,34 @@ const Services = () => {
   const services = [
     {
       title: "Swedish Massage",
-      description: "A gentle, relaxing massage that uses long strokes, kneading, and circular movements to ease tension and promote relaxation.",
-      image: "https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg",
-      duration: "60 min",
-      price: "₹2,800"
+      description:
+        "A relaxing full-body massage using gentle to medium pressure to ease muscle tension and improve circulation. Perfect for reducing stress, promoting relaxation, and restoring overall balance to the body and mind.",
+      image: "/images/swedish.jpeg",
     },
     {
       title: "Balinese Massage",
-      description: "Traditional deep tissue massage combined with acupressure, gentle stretches, and aromatherapy to promote healing and relaxation.",
-      image: "https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg",
-      duration: "90 min",
-      price: "₹3,500"
+      description:
+        "A deeply relaxing therapy that blends gentle stretches, acupressure, and soothing massage strokes. It helps relieve muscle tension, improve circulation, and restore harmony to the body and mind.",
+      image: "/images/balinese.jpeg",
     },
     {
       title: "Deep Tissue Massage",
-      description: "Targets deep layers of muscle and connective tissue to release chronic muscle tension and stress.",
-      image: "https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg",
-      duration: "60 min",
-      price: "₹3,200"
+      description:
+        "A therapeutic massage that uses firm pressure to target deeper layers of muscles and connective tissues. Ideal for relieving chronic pain, stiffness, and muscle tension while improving mobility and recovery.",
+      image: "/images/deep.jpeg",
     },
     {
-      title: "Luxury Facial",
-      description: "Advanced skincare treatment using premium products to rejuvenate and nourish your skin.",
-      image: "https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg",
-      duration: "75 min",
-      price: "₹4,200"
+      title: "Facial Treatment",
+      description:
+        "A rejuvenating skincare treatment designed to cleanse, exfoliate, and nourish the skin. Helps improve skin texture, boost hydration, and leave your face refreshed, glowing, and healthy.",
+      image: "/images/facial.jpeg",
     },
     {
-      title: "Aromatherapy Massage",
-      description: "Combines the power of essential oils with therapeutic massage techniques for complete relaxation.",
-      image: "https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg",
-      duration: "90 min",
-      price: "₹3,800"
+      title: "Aromatherapy",
+      description:
+        "A relaxing therapy that uses natural essential oils to calm the mind and balance the body. Helps reduce stress, improve mood, and promote deep relaxation and overall well-being.",
+      image: "/images/aromatherapy.jpeg",
     },
-    {
-      title: "Thai Therapy",
-      description: "Ancient healing system combining acupressure, Indian Ayurvedic principles, and assisted yoga postures.",
-      image: "https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg",
-      duration: "120 min",
-      price: "₹4,500"
-    }
   ];
 
   return (
@@ -61,9 +48,10 @@ const Services = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage:
+              "url(https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -98,21 +86,12 @@ const Services = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-serif text-gold">{service.title}</h3>
-                    <Star className="h-5 w-5 text-gold" />
+                    <h3 className="text-xl font-serif text-gold">
+                      {service.title}
+                    </h3>
                   </div>
-                  <p className="text-gold-light mb-4">
-                    {service.description}
-                  </p>
-                  <div className="flex justify-between items-center text-sm">
-                    <div className="flex items-center text-gold-light">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {service.duration}
-                    </div>
-                    <span className="font-semibold text-gold">
-                      {service.price}
-                    </span>
-                  </div>
+                  <p className="text-gold-light mb-4">{service.description}</p>
+                  <div className="flex justify-between items-center text-sm"></div>
                 </div>
               </motion.div>
             ))}

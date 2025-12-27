@@ -14,17 +14,17 @@ const Contact = () => {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
       content:
-        "Plot Number 169, Opp Police Training School, RPTS Rd, Laxminagar, Malhotras, Maharashtra 440010",
+        "Plot Number 169, Opp Police Training School, RPTS Rd, Laxminagar, Malhotras, Maharashtra 440022",
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      content: "+91-9370253809",
+      content: "+91 9370253809",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "info@sunwaywellness.com",
+      content: "sunwaywellness@gmail.com",
     },
     {
       icon: <Clock className="h-6 w-6" />,

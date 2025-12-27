@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Bot as Lotus, ChevronDown } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Bot as Lotus, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,23 +10,23 @@ const Navbar = () => {
   const location = useLocation();
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     {
-      href: '/services',
-      label: 'Services',
+      href: "/services",
+      label: "Services",
       dropdown: [
-        { href: '/services#swedish', label: 'Swedish Massage' },
-        { href: '/services#balinese', label: 'Balinese Massage' },
-        { href: '/services#deep-tissue', label: 'Deep Tissue' },
-        { href: '/services#facial', label: 'Facial Treatment' },
-        { href: '/services#aromatherapy', label: 'Aromatherapy' },
-        { href: '/services#thai', label: 'Thai Therapy' },
+        { href: "/services#swedish", label: "Swedish Massage" },
+        { href: "/services#balinese", label: "Balinese Massage" },
+        { href: "/services#deep-tissue", label: "Deep Tissue" },
+        { href: "/services#facial", label: "Facial Treatment" },
+        { href: "/services#aromatherapy", label: "Aromatherapy" },
+        { href: "/services#thai", label: "Thai Therapy" },
       ],
     },
-    { href: '/testimonials', label: 'Testimonials' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/blog', label: 'Blog' },
+    { href: "/testimonials", label: "Testimonials" },
+    { href: "/contact", label: "Contact" },
+    // { href: '/blog', label: 'Blog' },
   ];
 
   useEffect(() => {
@@ -34,14 +34,16 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gold/20' : 'bg-transparent'
+        isScrolled
+          ? "bg-black/90 backdrop-blur-md border-b border-gold/20"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,13 +61,19 @@ const Navbar = () => {
               <div
                 key={link.href}
                 className="relative"
-                onMouseEnter={() => link.dropdown && setShowServicesDropdown(true)}
-                onMouseLeave={() => link.dropdown && setShowServicesDropdown(false)}
+                onMouseEnter={() =>
+                  link.dropdown && setShowServicesDropdown(true)
+                }
+                onMouseLeave={() =>
+                  link.dropdown && setShowServicesDropdown(false)
+                }
               >
                 <Link
                   to={link.href}
                   className={`text-sm font-medium transition-colors hover:text-gold flex items-center ${
-                    location.pathname === link.href ? 'text-gold' : 'text-gold-light'
+                    location.pathname === link.href
+                      ? "text-gold"
+                      : "text-gold-light"
                   }`}
                 >
                   {link.label}
@@ -131,7 +139,9 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     className={`block w-full text-left py-2 text-base font-medium transition-colors hover:text-gold ${
-                      location.pathname === link.href ? 'text-gold' : 'text-gold-light'
+                      location.pathname === link.href
+                        ? "text-gold"
+                        : "text-gold-light"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >

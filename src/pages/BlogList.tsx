@@ -55,7 +55,7 @@ const BlogList = () => {
           );
         setAllTags(tags);
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError("Failed to load blog posts");
       console.error("Fetch posts error:", err);
     } finally {
